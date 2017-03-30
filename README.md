@@ -40,8 +40,18 @@ Grade breakdown:
 - Th - Internet foundations, client-server communications, browser basics
 - HW - Browsing by hand
 - Reading
-	- WAHH Chapter 12
-	- WAHH Chapter 3
+	- For HW
+		- https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+		- https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
+		- https://developer.mozilla.org/en-US/docs/Web/HTTP/Session
+		- https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
+		- https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
+		- https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+		- https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+	- For next week
+		- https://excess-xss.com/
+		- WAHH Chapter 12
+		- WAHH Chapter 3
 
 ## Week 2 - XSS
 - Tu - XSS introduction
