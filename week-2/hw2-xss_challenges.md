@@ -4,7 +4,7 @@ Homework challenges can be found at: http://xss-challenges.r7.io/
 ### Part 1 - Vulnerabilities - 25.5 points
 Each vulnerability will be worth 1.5 points. To earn 100% on this section you must complete all 17 challenges. 
 
-Each vulnerability must call "alert(0)" via a payload entered through the website in order to demonstrate script execution. It is preferable that the injected JavaScript execute automatically when the page loads, but that may not be possible in all cases. Please try to make it automatic where you can. *Each answer must be in the form of a URL (link) that you could send to a victim to click on if possible.* One challenge cannot be triggered via a link. In that case supply the steps so I can re-create the attack.
+Each vulnerability must call "alert(0)" via a payload entered through the website in order to demonstrate script execution. It is preferable that the injected JavaScript execute automatically when the page loads, but that may not be possible in all cases. Please try to make it automatic where you can. **Each answer must be in the form of a URL (link) that you could send to a victim to click on if possible.** One challenge cannot be triggered via a link. In that case supply the steps so I can re-create the attack.
 
 Note: 
 - No importing external scripts or externally hosted files.
