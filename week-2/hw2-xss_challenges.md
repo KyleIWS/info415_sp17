@@ -30,7 +30,7 @@ Note:
 The URLS for Part 1 and the report for Part 2 should be in one file in .txt format (no Word Docs, PDFs, RTFs, or anything other than a .txt)!
 
 ### Due Date
-3:30pm (15:30) Thursday April 14th 2014 
+9:30am Thursday April 13th 2017
 
 ### Note
 Please include links to any pages, guides, tutorials, people, or anything you used to help you figure out these challenges. Please do not cheat or trade answers! If you gently/fairly help one another out make sure to credit the people that helped you in your report. Give credit where credit is due.
