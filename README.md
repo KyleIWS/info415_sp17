@@ -65,7 +65,7 @@ Grade breakdown:
 - Tu - Regular expressions (regex)
 - La - XSS practice
 - Th - Advanced XSS payloads
-- HW - XSS worm
+- HW - Advanced XSS payloads
 - Reading
 	- WAHH Chapter 13 section on "Inducing User Action" (501-515)
 	- http://www.troyhunt.com/2013/05/clickjack-attack-hidden-threat-right-in.html
@@ -90,7 +90,7 @@ Grade breakdown:
 - Tu - Advanced SQLi techniques
 - La - Keyloggers
 - Th - SQLi to full control
-- HW - Advanced SQLi challenges
+- HW - Midterm
 - Reading
 	- WAHH chapter 6
 	- WAHH chapter 7
@@ -104,15 +104,15 @@ Grade breakdown:
 	- None
 
 ## Week 8 - Crypto
-- Tu - Cryptography
+- Tu - Canceled
 - La - Bitcoin
-- Th - OAuth 1.0 and business logic attacks
+- Th - Cryptography
 - HW - None
 - Reading
 	- None
 
 ## Week 9 - Misc. Attacks
-- Tu - Lockpicking
+- Tu - OAuth 1.0 and business logic attacks
 - La - Testing techniques
 - Th - Practice
 - HW - Golden bank pentest
