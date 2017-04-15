@@ -81,7 +81,7 @@ Grade breakdown:
 ## Week 5 - SQLi
 - Tu - SQLi introduction
 - La - Social engineering
-- Th - SQLi practice
+- Th - SQL and SQLi practice
 - HW - SQLi challenges
 - Reading
 	- None
