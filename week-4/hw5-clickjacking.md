@@ -31,7 +31,7 @@ A .zip file containing:
 
 
 ## Due Date
-The whole HW (vulnerabilities and report) are due at 3:30pm (15:30) Thursday April 28th 2016
+The whole HW (vulnerabilities and report) are due at 11:59pm (23:59) Friday April 29th 2017
 
 ## Notes
 Please include links to any pages, guides, tutorials, people, or anything you used to help you figure out these challenges. Please do not cheat or trade answers! If you gently/fairly help one another out make sure to credit the people that helped you in your report. Give credit where credit is due.
