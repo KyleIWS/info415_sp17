@@ -2,30 +2,32 @@
 
 Keep the following in mind: 
 
-- For each of the payloads below the XSS vulnerability you will be taking advantage of is http://xss-challenges.r7.io/0/login
+- For each of the payloads below the XSS vulnerability you will be taking advantage of is located at: http://xss-challenges.r7.io/0/login
 - Your final payload must be in the form of a link you can email someone, like the deliverables for HW 2.
-- Make sure to look at the slide deck from Thursday's lecture and know how to use the tool located at http://r7.io/exfil_create - play around with it to make sure you understand how it works.
+- Make sure to look at the slide deck from Thursday week 3's lecture and know how to use the tool located at: http://r7.io/exfil_create
 - The login page should not display the error message saying "blah does not appear in the system" or it will arouse suspicion in the victim. Your payload should automatically clear the error message when the page first loads.
 
 ### Payload 1 - Altering Form Submission (10 points)
 
-For this payload you will need to automatically alter the login form using Javascript so that when the victim submits the form it will send the password to your capture page on http://r7.io/e/[net-id]. Make sure to automatically remove the error message that appears to keep the victim from becoming suspicious. 
+For this payload you will need to automatically alter the login form using Javascript so that when the victim submits the form it will send the password to your capture page on http://r7.io/e/[net-id]. Make sure to automatically remove the error message to increase stealth. In this case it is fine if the page redirects when the the user hits submit.
 
 The scenario is: you send the link to a victim via email, they click on the link and are taken to the login page, they think "oh hey I need to log in" and type in their username and password and hit submit. Without knowing it the password is sent off to your exfiltration site where you can retrieve it. You are assuming you already know their username which is probably their email, because it pretty much always is.
 
 ### Payload 2 - Redirect to Fake Form (15 points)
 
-For this payload you need to redirect the victim to an identical looking login form that is hosted somewhere you control. You can use your UW provided hosting or wherever as long as you can legally host a page there. The login page you redirect to should look identical to the one you are redirecting them from. When the victim clicks submit their credentials should pop up in an alert box. I know this isn't realistic, but I want you to prove you are capable of reading the submitted credentials and I want to make it easy to grade :)
+For this payload you need to redirect the victim to an identical looking login form that is hosted somewhere you control. You can use your UW provided hosting or wherever as long as you can legally host a page there. The login page you redirect to should look identical to the one you are redirecting them from. When the victim clicks submit their credentials should pop up in an alert box and be exfiltrated. The page _should not_ redirect to the exfiltration site.
+
+The scenario is: you send a link to a victim via email, they click on the link and are taken to the login page, the page appears to suddenly reload, but everything on the page looks the same so they don't think anything of it. They proceed to type in their username and password and when they hit submit the credentials are sent to the exfiltration site and they are on the same page. Note: you will also show their credentials in an alert box to make for easier grading.
 
 ### Payload 3 - Exfiltrate Session Cookie (5 points)
 
-For this payload you need to exfiltrate the victims session cookie. When the user clicks on your malicious link they should be taken to the login page, the error message should not be visible (no need to tip them off that something is wrong), and the session cookie should be silently sent off to your exfiltration storage at: http://r7.io/e/[net-id]
+For this payload you need to exfiltrate the victims session cookie. When the user clicks on your malicious link they should be taken to the login page, the error message should not be visible (no need to tip them off that something is wrong), and the session cookie should be sent off to your exfiltration storage and shown in an alert box.
 
 ### Payload 4 - Steal Admin Secrets (10 points)
 
-For this payload you will need to steal the admin secrets located at http://xss-challenges.r7.io/admin/secrets. If you go to that page and view the HTML you can see there is an HTML element with the id "secrets" and a message. When the admin goes to that page they see their super secret message, but you can't see it because you're not an admin. You need to craft a payload that automatically grabs the contents of that HTML element on that page and pops an alert box containing the message.
+For this payload you will need to steal the admin secrets located at http://xss-challenges.r7.io/admin/secrets. If you go to that page and view the HTML you can see there is an HTML element with the id "secrets" and a message. When the admin goes to that page they see their super secret message, but you can't see it because you're not an admin (sad!). You need to craft a payload that automatically grabs the contents of that HTML element on that page, pops an alert box containing the message, and sends the message off to your exfiltration storage.
 
-The scenario is: you send a link to the admin via email, they click the link, your payload is triggered, it goes and fetches the contents of the "secrets" element on the /admin/secrets page and sends it off to your exfiltration page at: http://r7.io/e/[net-id]. Make sure the error message above the login prompt isn't visible. The Admin has a keen eye.
+The scenario is: you send a link to the admin via email, they click the link, your payload is triggered, it goes and fetches the contents of the "secrets" element on the /admin/secrets page, pops an alert box showing the secret, and sends it off to your exfiltration page at: http://r7.io/e/[net-id]. Make sure the error message above the login prompt isn't visible. The Admin has a keen eye.
 
 ### Deliverables
 The URLS for Part 1 through 4 should be in one file in .txt format (no Word Docs, PDFs, RTFs, or anything other than a .txt)!
