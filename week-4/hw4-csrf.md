@@ -42,6 +42,8 @@ The whole HW (vulnerabilities and report) are due at 11:59pm (23:59) Saturday Ap
 ## Notes & Hints
 Submit forms, even if you are not authenticated, and intercept the requests with Burp. This can give you a look at what is being sent to the server, so you can re-create that request in your malicious page.
 
+For level 3 - pretend that the CSRF token is tied to the user (in a proper implementation it is). You all are anonymous users so you get tokens tied to no one, but the admin has a token tied to them. So requesting the form, grabbing the token attached to it, and dropping it in a payload will not work for level 3. See the next hint.
+
 Don't assume just because there is a CSRF token that it is being checked properly on the server. Do some tests to verify that the token is being properly validated.
 
 Please include links to any pages, guides, tutorials, people, or anything you used to help you figure out these challenges. Please do not cheat or trade answers! If you gently/fairly help one another out make sure to credit the people that helped you in your report. Give credit where credit is due.
