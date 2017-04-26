@@ -37,7 +37,7 @@ A .zip file containing the following:
 ## Due Date
 You can submit your malicious pages and link to me on Tuesday April 25th by 5:30pm (17:30) via email and I will run them. This will allow you to verify whether your CSRF attacks worked, and if they didn't work, give you a few days to tweak them.
 
-The whole HW (vulnerabilities and report) are due at 11:59pm (23:59) Friday April 28th 2017.
+The whole HW (vulnerabilities and report) are due at 11:59pm (23:59) Saturday April 30th 2017.
 
 ## Notes & Hints
 Submit forms, even if you are not authenticated, and intercept the requests with Burp. This can give you a look at what is being sent to the server, so you can re-create that request in your malicious page.
