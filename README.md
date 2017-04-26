@@ -88,7 +88,7 @@ Grade breakdown:
 
 ## Week 6 - SQLi
 - Tu - Advanced SQLi techniques
-- La - Keyloggers
+- La - Authentication 2.0
 - Th - SQLi to full control
 - HW - Midterm
 - Reading
@@ -97,8 +97,8 @@ Grade breakdown:
 
 ## Week 7 - Authentication
 - Tu - Common authentication issues
-- La - Personal security
-- Th - Authentication 2.0
+- La - Canceled
+- Th - Canceled
 - HW - Brute force, user enumeration, and timing attacks
 - Reading
 	- None
