@@ -105,7 +105,7 @@ Grade breakdown:
 
 ## Week 8 - Crypto
 - Tu - Canceled
-- La - Midterm review
+- La - TBD
 - Th - Common authentication flaws
 - HW - Brute force, user enumeration, and timing attacks
 - Reading
