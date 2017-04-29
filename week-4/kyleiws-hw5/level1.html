@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Save-A-Kitten</title>
+    </head>
+    <body style="background-color: pink;">
+        <h1 style="text-align: center; font-size: 60pt; margin-bottom: -30px;">Kittens in Need</h1>
+        <marquee><h2>Thousands of kitens are in need of saving right now</h2></marquee>
+        <div style="text-align: center;">
+        <img style = "width: 300px; height: 300px; margin: auto;"
+        src="http://1funny.com/wp-content/uploads/2011/07/kitten-needs-help.jpg">
+        <img style = "width: 300px; height: 300px; margin: auto;"
+        src="http://i.imgur.com/VdtgCMS.jpg">
+        <img style = "width: 300px; height: 300px; margin: auto;"
+        src="http://www.boredninja.net/wp-content/uploads/2016/03/funny-help17.jpg">
+        <br />
+        </div>
+        <div style="text-align: center;">
+            <button style="font-size: 40pt;">sav >1< kitten</button>
+        </div>
+        <div>
+            <h1 style="text-align: center; color: blue;">
+                Kittens Saved: <span id="saved">0</span>
+            </h1>
+            <iframe src="http://clickjacking-challenges.r7.io/level/1" 
+                style="position: absolute; top:410px; left: 500px; opacity: 0;"/>
+        </div>
+
+        
+        <script>
+            var but = document.querySelector("button");
+            but.onclick = function() {
+                var curVal = parseInt(document.getElementById("saved").innerHTML);
+                document.getElementById("saved").innerHTML = curVal + 1;
+            }
+        </script>
+    </body>
+</html>

