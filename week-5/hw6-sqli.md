@@ -1,4 +1,4 @@
-## SQLi HW Grading (36 points total)
+## SQLi HW Grading (45 points total)
 Homework challenges can be found at http://sqli-challenges.r7.io/
 
 To go to your individual challenges go to http://sqli-challenges.r7.io/[uw-netid]
