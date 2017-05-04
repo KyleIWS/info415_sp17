@@ -88,7 +88,7 @@ Grade breakdown:
 
 ## Week 6 - SQLi
 - Tu - Advanced SQLi techniques
-- La - Keyloggers
+- La - HW review
 - Th - SQLi to full control
 - HW - Midterm
 - Reading
@@ -96,25 +96,25 @@ Grade breakdown:
 	- WAHH chapter 7
 
 ## Week 7 - Authentication
-- Tu - Common authentication issues
-- La - Personal security
-- Th - Authentication 2.0
-- HW - Brute force, user enumeration, and timing attacks
+- Tu - Midterm review
+- La - Canceled
+- Th - Canceled
+- HW - None, enjoy the breather
 - Reading
 	- None
 
 ## Week 8 - Crypto
 - Tu - Canceled
-- La - Bitcoin
-- Th - Cryptography
-- HW - None
+- La - TBD
+- Th - Common authentication flaws
+- HW - Brute force, user enumeration, and timing attacks
 - Reading
 	- None
 
 ## Week 9 - Misc. Attacks
-- Tu - OAuth 1.0 and business logic attacks
-- La - Testing techniques
-- Th - Practice
+- Tu - Cryptography
+- La - Authentication 2.0
+- Th - OAuth 1.0 and business logic attacks
 - HW - Golden bank pentest
 - Reading
 

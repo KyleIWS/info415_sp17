@@ -37,10 +37,12 @@ A .zip file containing the following:
 ## Due Date
 You can submit your malicious pages and link to me on Tuesday April 25th by 5:30pm (17:30) via email and I will run them. This will allow you to verify whether your CSRF attacks worked, and if they didn't work, give you a few days to tweak them.
 
-The whole HW (vulnerabilities and report) are due at 11:59pm (23:59) Friday April 28th 2017.
+The whole HW (vulnerabilities and report) are due at 11:59pm (23:59) Saturday April 29th 2017.
 
 ## Notes & Hints
 Submit forms, even if you are not authenticated, and intercept the requests with Burp. This can give you a look at what is being sent to the server, so you can re-create that request in your malicious page.
+
+For level 3 - pretend that the CSRF token is tied to the user (in a proper implementation it is). You all are anonymous users so you get tokens tied to no one, but the admin has a token tied to them. So requesting the form, grabbing the token attached to it, and dropping it in a payload will not work for level 3. See the next hint.
 
 Don't assume just because there is a CSRF token that it is being checked properly on the server. Do some tests to verify that the token is being properly validated.
 
